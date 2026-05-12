@@ -60,6 +60,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	gap: 5px;
 }
 
 .active-page {
@@ -69,6 +70,62 @@ header {
 .nigth {
 	padding-left: 14%;
 	padding-top: 1.5%;
+}
+
+.dialog {
+	border: none;
+	background-color: rgba(58, 58, 58, 0.95);
+	opacity: 95%;
+	width: 100%;
+	height: 100%;
+	padding: 10%;
+	flex-direction: column;
+}
+
+.menu-choice {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.menu-link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 2%;
+	width: 100%;
+	gap: 10px;
+	padding-left: 50%;
+}
+
+.menu-image {
+	width: 10%;
+}
+
+.p38 {
+	font-size: 38px;
+}
+
+.button-exit {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.btn-exit {
+	border: none;
+}
+
+/* rgba(58, 58, 58, 0.95) */
+
+#exit {
+	background-color: rgba(58, 58, 58, 0.95);
+	opacity: 95%;
+	padding: 0%;
+	border: none;
 }
 
 main {
@@ -84,17 +141,18 @@ main {
 
 h1 {
 	color: #3a3a3a;
+	font-weight: 300;
 }
 
 .sky {
 	padding: 3%;
-	width: 98.36%;
+	width: 98.3%;
 	margin-left: -60px;
 	background-image: url(ASSETS-mine/background-cloud.svg);
 }
 .dirt {
 	padding: 3%;
-	width: 98.36%;
+	width: 98.3%;
 	margin-left: -60px;
 	background-image: url(ASSETS-mine/background-dirt.svg);
 	height: 22vh;
@@ -159,7 +217,12 @@ a {
 	color: white;
 	font-family: "Rubik";
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 15px;
+	margin-bottom: 2px;
+}
+
+.menu-phone {
+	display: none;
 }
 
 @media screen and (max-width: 495px) {
@@ -201,6 +264,10 @@ a {
 	.search-container {
 		margin-right: -23vw;
 	}
+
+	.menu-phone {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 850px) {
@@ -209,8 +276,8 @@ a {
 		top: 13vw;
 		background-color: rgba(230, 239, 244, 1);
 		padding: 30px;
-		margin-top: 30px;
-		margin-left: 6.8vw;
+		margin-top: 20vw;
+		margin-left: 1.8vw;
 		border-radius: 26px 30px 26px 30px;
 		width: 75%;
 	}
@@ -227,5 +294,9 @@ a {
 		margin-left: -16px;
 		background-image: url(ASSETS-mine/background-dirt.svg);
 		height: 22vh;
+	}
+
+	.menu-phone {
+		display: none;
 	}
 }

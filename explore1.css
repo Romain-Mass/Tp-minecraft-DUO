@@ -268,6 +268,10 @@
 	margin-left: -1%;
 }
 
+.menu-phone {
+	display: none;
+}
+
 @media screen and (max-width: 850px) {
 	.right {
 		margin-left: -6vw;
@@ -443,8 +447,12 @@
 	}
 
 	.btn-fix {
-	margin-left: 2.5%;
-}
+		margin-left: 2.5%;
+	}
+
+	.menu-phone {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 495px) {
@@ -539,5 +547,11 @@
 
 	.btn-fix {
 		margin-left: -9%;
+	}
+
+	.mob-photo {
+		width: 150%;
+		height: auto;
+		margin-left: -20vw;
 	}
 }
