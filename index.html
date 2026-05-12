@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Minecraft Wiki - Explore Minecraft entities</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="explore1.css" />
+		 <link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+			 <header>
+                <section class="right">
+				<div class="logo">
+					<img src="ASSETS-mine/nav-title.svg" alt="" />
+				</div>
+				<div class="nav">
+					<div class="link-block">
+						<img src="ASSETS-mine/compass.svg" alt="" />
+						<a class="active-page" href="index.html">EXPLORE</a>
+					</div>
+					<div class="link-block">
+						<img src="ASSETS-mine/Vector (6).svg" alt="" />
+						<a href="arena.html">ARENA</div>
+					
+					<div class="link-block">
+						<img src="ASSETS-mine/book-open-variant.svg" alt="" />
+						<a href="rule.html">RULES</a>
+					</div>
+                    </div>
+                </section>
+				</div>
+                <section class="right2">
+				    <div class="search-container">
+				        <img class="search1" src="ASSETS-mine/magnify.svg" alt="">
+					
+				        <input id="search-bar" type="text" placeholder="Search...">
+				    </div>
+				
+				    <div id="nigth" class="nigth">
+				        <img src="ASSETS-mine/weather-night.svg" alt="">
+				    </div>
+				</section>
+				<img id="menu" src="ASSETS-mine/menu.svg" alt="">
+			</header>
+			<section class="sky"></section>
+			<section class="dirt"></section>
+    <main>
+		<section class="head">
+			<div>
+			     <h1>Explore Minecraft entities</h1>
+			<div class="warning  back-color9">
+            <div class="  back-color9">
+		             <img class="warning-image" src="ASSETS-mine/stubImage.svg" alt="" >
+	              </div>
+	              <div>
+	                  <h3 class="no-text-space">This page use many images.</h3>
+	                  <p class="no-text-space">It is not recommended for people with limited or slow internet connections to read through this page.<p>
+	             </div>
+	         </div>
+			 <div class="description">
+			<div class="description-text">
+				<p>An <strong>Entity</strong> is an AI-driven game entity resembling a living creature. Besides its common meaning, the
+					term "mob" is short for "mobile entity".[1] All entities can be attacked and hurt (from falling, attacked by
+					a player or another entity, falling into the void, hit by an arrow, etc), and have some form of voluntary
+					movement.</p>
+				<p>Different types of entities often have unique AI and drop good or bad loot depending on the entity that was killed.</p>
+			 </div>
+			 <div>
+				<img class="mob-photo" src="ASSETS-mine/Rectangle 11.svg" alt="">
+			 </div>
+			</div>
+			 <div>
+				<h3 class="mine">List of entities</h3>
+				<img class="slash" src="ASSETS-mine/Rectangle 10.svg" alt="">
+				<p>Entities are classifie by their nature from the player's perspective. You can search for one or multiples entities by their name using the search bar or simply by filling appropriate filters (type, health, armor, damage, etc..)</p>
+			 </div>
+		</section>
+			<div class="search-container2">
+    			<img id="Search" class="search-icon" src="ASSETS-mine/magnify2.svg" alt="">
+
+    				<input
+       					 class="bar-search"
+        				type="text"
+        				placeholder="Search..."
+    				>
+			</div>
+
+			<section class="Search-text">
+				<form class="form">
+					 <div class="inputs-fix">
+					<section id="choice">
+		     <div class="classes param">
+                <label for="Classification">Classification</label>
+
+                <select name="classe" id="Classification">
+                    <option value="">Choose</option>
+                    <option value="animal">animal</option>
+                    <option value="arthropod">arthropod</option>
+                    <option value="undead">undead</option>
+                    <option value="aquatic">aquatic</option>
+                    <option value="monster">monster</option>
+                </select>
+		     </div>
+		     <div class="type param">
+			    <label for="Type">Type</label>
+
+                <select class="type-class"  id="Type" name="type">
+                    <option value="">Choose</option>
+                    <option value="passive">passive</option>
+                    <option value="neutral">neutral</option>
+                    <option value="hostile">hostile</option>
+                </select>
+		     </div>
+ </section>
+			 <section class="main2">
+		    <div class="Health inp">
+			 <label for="health">Health</label>
+			 <input id="input" type="number">
+		   </div>
+
+		   <div class="Armor inp">
+			 <label for="Armor">Armor</label>
+			 <input id="input" type="number">
+		   </div>
+		   
+
+		   <div class="Damage inp">
+			 <label for="Damage">Damage</label>
+			 <input id="input" type="number">
+		   </div>
+		</section>
+		  
+	</div>
+	<div class="btn-fix">
+		   <div class="btn">
+			 <button class="btn-search">SEARCH</button>
+		   </div>
+		</div>
+           </form>
+		</section>
+	
+			<img class="slash" src="ASSETS-mine/Rectangle 10.svg" alt="">
+		<section class="mob-found color5">
+			<div class="notFound">
+				<h3>No entity found</h3>
+				<img class="not" src="ASSETS-mine/emoticon-dead.svg" alt="">
+			</div>
+		</section>
+	</main>
+	<script src="app.js"></script>
+	</body>
+</html>

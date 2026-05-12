@@ -1,0 +1,155 @@
+.back-color1 {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.back-color2 {
+	background-color: rgba(230, 239, 244, 1);
+}
+
+.back-color3 {
+	background-color: rgba(242, 89, 89, 1);
+}
+
+.back-color4 {
+	background-color: rgba(79, 140, 105, 1);
+}
+
+.back-color5 {
+	background-color: rgba(217, 217, 217, 1);
+}
+
+.back-color6 {
+	background-color: rgba(219, 219, 219, 1);
+}
+
+.back-color7 {
+	background-color: rgba(244, 244, 244, 1);
+}
+
+.back-color8 {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.back-color9 {
+	background-color: rgba(245, 194, 205, 1);
+}
+
+.color1 {
+	color: rgba(255, 255, 255, 1);
+}
+
+.color2 {
+	color: rgba(142, 142, 142, 1);
+}
+
+.color3 {
+	color: rgba(2, 70, 241, 1);
+}
+
+.color4 {
+	color: rgba(58, 58, 58, 1);
+}
+
+.color5 {
+	color: rgba(140, 140, 140, 1);
+}
+
+.p16 {
+	font-size: 16px;
+}
+
+.p48 {
+	font-size: 48px;
+}
+
+.p22 {
+	font-size: 22px;
+}
+
+.open {
+	background-color: #4f8c69;
+	color: white;
+	width: max-content;
+	padding: 5px 16px;
+	border-radius: 8px;
+	margin-left: 15px;
+}
+.close {
+	background-color: #f25959;
+	color: white;
+	width: max-content;
+	padding: 5px 16px;
+	border-radius: 8px;
+}
+
+.arena {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 17%;
+}
+
+.settings {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 3%;
+}
+
+.line {
+	width: 100%;
+}
+
+.line2 {
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.map {
+	padding-top: 20%;
+	border: solid rgba(140, 140, 140, 1);
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.type-stats {
+	background-color: rgba(142, 142, 142, 1);
+}
+
+.table {
+	border: solid black 1px;
+}
+
+.btn-del {
+	color: rgba(255, 255, 255, 1);
+	background-color: #f25959;
+	border-radius: 99px;
+	padding: 15px 30px 15px 30px;
+}
+
+select {
+	width: 100%;
+}
+
+.settings-type {
+	width: 30%;
+}
+
+.active-page {
+	text-decoration: underline;
+}
+
+.table {
+	width: 100%;
+}
+
+@media screen and (max-width: 495px) {
+	h3 {
+		font-size: 16px;
+	}
+
+	.table-style1 {
+		word-break: break-all;
+	}
+}

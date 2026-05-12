@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+	background-image: url("ASSETS-mine/background-stone.png");
+}
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin-top: 12px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.search-container {
+	position: relative;
+	width: 80%;
+}
+
+.search1 {
+	position: absolute;
+	left: 10px;
+	top: 60%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+}
+
+#search-bar {
+	width: 100%;
+	padding: 5px 10px 5px 40px;
+	border-radius: 999px;
+	border: 1px solid #ccc;
+	margin-top: 5px;
+}
+
+.right {
+	margin-left: -12vw;
+	display: flex;
+	flex-direction: row;
+}
+.right2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5vw;
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 4vw;
+	gap: 20px;
+}
+.link-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.active-page {
+	text-decoration: underline solid 3px;
+}
+
+.nigth {
+	padding-left: 14%;
+	padding-top: 1.5%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(230, 239, 244, 1);
+	padding: 30px;
+	margin-top: -10vw;
+	margin-left: 15vw;
+	border-radius: 26px 30px 26px 30px;
+	width: 63%;
+}
+
+h1 {
+	color: #3a3a3a;
+}
+
+.sky {
+	padding: 3%;
+	width: 98.36%;
+	margin-left: -60px;
+	background-image: url(ASSETS-mine/background-cloud.svg);
+}
+.dirt {
+	padding: 3%;
+	width: 98.36%;
+	margin-left: -60px;
+	background-image: url(ASSETS-mine/background-dirt.svg);
+	height: 22vh;
+}
+
+h3,
+p,
+h1 {
+	font-family: "Rubik";
+}
+
+.no-text-space {
+	margin: 0;
+}
+
+.btn-search {
+	background-color: rgba(79, 140, 105, 1);
+	font-size: larger;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 99px;
+	padding: 15px 30px 15px 30px;
+}
+
+.btn-search:active {
+	background-color: rgba(219, 219, 219, 1);
+	font-size: larger;
+	font-weight: bold;
+	color: rgba(142, 142, 142, 1);
+	border: none;
+	border-radius: 99px;
+	padding: 15px 30px 15px 30px;
+}
+
+.btn-spawn {
+	background-color: rgba(79, 140, 105, 1);
+	font-size: larger;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 99px;
+	padding: 15px 30px 15px 30px;
+}
+
+.btn-spawn:active {
+	background-color: rgba(219, 219, 219, 1);
+	font-size: larger;
+	font-weight: bold;
+	color: rgba(142, 142, 142, 1);
+	border: none;
+	border-radius: 99px;
+	padding: 15px 30px 15px 30px;
+}
+
+.line {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: "Rubik";
+	font-weight: 600;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 495px) {
+	main {
+		position: absolute;
+		top: 13vw;
+		background-color: rgba(230, 239, 244, 1);
+		padding: 30px;
+		margin-top: 30px;
+		border-radius: 26px 30px 26px 30px;
+		width: 75%;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	#choice {
+		display: flex;
+	}
+
+	.health,
+	.armor {
+		width: 27vw;
+	}
+
+	#menu {
+		display: flex;
+		margin-top: 5px;
+	}
+
+	.nigth {
+		display: none;
+	}
+
+	#search-bar {
+		width: 35%;
+	}
+	.search-container {
+		margin-right: -23vw;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	main {
+		position: absolute;
+		top: 13vw;
+		background-color: rgba(230, 239, 244, 1);
+		padding: 30px;
+		margin-top: 30px;
+		margin-left: 6.8vw;
+		border-radius: 26px 30px 26px 30px;
+		width: 75%;
+	}
+
+	.sky {
+		padding: 3%;
+		width: 100%;
+		margin-left: -16px;
+		background-image: url(ASSETS-mine/background-cloud.svg);
+	}
+	.dirt {
+		padding: 3%;
+		width: 100%;
+		margin-left: -16px;
+		background-image: url(ASSETS-mine/background-dirt.svg);
+		height: 22vh;
+	}
+}

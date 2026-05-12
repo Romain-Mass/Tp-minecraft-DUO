@@ -1,0 +1,543 @@
+.back-color1 {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.back-color2 {
+	background-color: rgba(230, 239, 244, 1);
+}
+
+.back-color3 {
+	background-color: rgba(242, 89, 89, 1);
+}
+
+.back-color4 {
+	background-color: rgba(79, 140, 105, 1);
+}
+
+.back-color5 {
+	background-color: rgba(217, 217, 217, 1);
+}
+
+.back-color6 {
+	background-color: rgba(219, 219, 219, 1);
+}
+
+.back-color7 {
+	background-color: rgba(244, 244, 244, 1);
+}
+
+.back-color8 {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.back-color9 {
+	background-color: rgba(245, 194, 205, 1);
+}
+
+.color1 {
+	color: rgba(255, 255, 255, 1);
+}
+
+.color2 {
+	color: rgba(142, 142, 142, 1);
+}
+
+.color3 {
+	color: rgba(2, 70, 241, 1);
+}
+
+.color4 {
+	color: rgba(58, 58, 58, 1);
+}
+
+.color5 {
+	color: rgba(140, 140, 140, 1);
+}
+
+.p16 {
+	font-size: 16px;
+}
+
+.p48 {
+	font-size: 48px;
+}
+
+.p22 {
+	font-size: 22px;
+}
+
+.right {
+	margin-left: -6vw;
+	display: flex;
+	flex-direction: row;
+	gap: 5vw;
+}
+.right2 {
+	display: flex;
+	flex-direction: row;
+	gap: 5vw;
+}
+
+.logo {
+	margin-left: 2vw;
+	margin-right: -3vw;
+}
+
+.link-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+}
+.bar-search {
+	width: 100%;
+	margin-bottom: 2vw;
+	margin-top: 2vw;
+	margin-left: 3vw;
+	border-radius: 8px 8px 8px 8px;
+	border: none;
+	padding: 11px;
+}
+
+.bar-search:placeholder {
+	color: #dbdbdb;
+}
+
+.moon {
+	padding-right: 1%;
+}
+
+.mine {
+	margin-bottom: -20px;
+}
+
+.search-container2 {
+	position: relative;
+	width: 250px;
+}
+
+.search-icon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 18px;
+}
+
+.bar-search {
+	width: 51vw;
+	padding: 10px 10px 10px 40px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+}
+
+.warning {
+	border-left: solid 5px;
+	border-left-color: rgba(242, 89, 89, 1);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-top: 1%;
+	gap: 10px;
+}
+
+.warning-image {
+	padding-bottom: 1%;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 9vw;
+	gap: 3vw;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	margin-left: 18vw;
+}
+
+.classes,
+.type,
+.Health,
+.Armor,
+.Damage {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	gap: 10px;
+}
+
+#Classification,
+#Type {
+	padding: 1px 15px;
+	border: none;
+	border-radius: 4px;
+}
+#input {
+	border: none;
+	opacity: 1;
+	border-radius: 4px;
+	gap: 24px;
+	width: 90%;
+	/* padding: 8px; */
+}
+
+#choice {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: -4vw;
+	gap: 20px;
+}
+
+.main2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: 10%;
+}
+
+.mob-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.notFound {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.slash {
+	width: 100%;
+	margin-top: 3vw;
+}
+
+.description {
+	display: flex;
+	flex-direction: row;
+	padding-top: 1%;
+}
+
+.description-text {
+	width: 70%;
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+#Search {
+	margin-top: 2px;
+	margin-left: 49px;
+	height: 4vh;
+}
+
+#menu {
+	display: none;
+}
+
+.Search-text {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.inputs-fix {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.btn-fix {
+	margin-left: -1%;
+}
+
+@media screen and (max-width: 850px) {
+	.right {
+		margin-left: -6vw;
+		display: flex;
+		flex-direction: row;
+		gap: 5vw;
+	}
+	.right2 {
+		display: flex;
+		flex-direction: row;
+		gap: 5vw;
+	}
+
+	.logo {
+		padding-left: 1%;
+	}
+
+	.link-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 25px;
+	}
+	.bar-search {
+		width: 63vw;
+		margin-bottom: 2vw;
+		margin-top: 2vw;
+		margin-left: 3vw;
+		border-radius: 8px 8px 8px 8px;
+		border: none;
+		padding: 11px;
+	}
+
+	.bar-search:placeholder {
+		color: #dbdbdb;
+	}
+
+	.moon {
+		padding-right: 1%;
+	}
+
+	.mine {
+		margin-bottom: -20px;
+	}
+
+	.warning {
+		border-left: solid 5px;
+		border-left-color: rgba(242, 89, 89, 1);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding-top: 1%;
+		gap: 10px;
+	}
+
+	.warning-image {
+		padding-bottom: 1%;
+	}
+
+	.Search-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 3vw;
+	}
+
+	.btn {
+		display: flex;
+		justify-content: center;
+		margin-left: 18vw;
+	}
+
+	.classes,
+	.type,
+	.Health,
+	.Armor,
+	.Damage {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10px;
+		gap: 10px;
+	}
+
+	#Classification,
+	#Type {
+		padding: 1px 15px;
+		border: none;
+		border-radius: 4px;
+	}
+	#input {
+		border: none;
+		opacity: 1;
+		border-radius: 4px;
+		gap: 8px;
+		width: 80%;
+		/* padding: 8px; */
+	}
+
+	#choice {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-left: -4vw;
+		gap: 20px;
+	}
+
+	.main2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.mob-found {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slash {
+		width: 100%;
+		margin-top: 3vw;
+	}
+
+	.description {
+		display: flex;
+		flex-direction: row;
+		padding-top: 1%;
+	}
+
+	.description-text {
+		width: 70%;
+		font-size: 16px;
+		margin-left: 20px;
+	}
+
+	.mob-photo {
+		width: 170%;
+		height: auto;
+		margin-left: -30%;
+	}
+
+	#Search {
+		margin-top: 0px;
+		margin-left: 23px;
+		height: 4vh;
+	}
+
+	.Search-text {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.inputs-fix {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.btn-fix {
+	margin-left: 2.5%;
+}
+}
+
+@media screen and (max-width: 495px) {
+	.description {
+		display: flex;
+		flex-direction: column;
+		padding-top: 1%;
+	}
+
+	.slash {
+		width: 100%;
+		border-bottom-color: rgba(58, 58, 58, 1) 5px;
+		margin-top: 5vw;
+	}
+	.btn {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-left: 18vw;
+	}
+
+	.classes,
+	.type,
+	.Health,
+	.Armor,
+	.Damage {
+		display: flex;
+		margin-top: 10px;
+		gap: 10px;
+		width: 100%;
+	}
+
+	#Classification,
+	#Type {
+		display: flex;
+		flex-direction: row;
+		padding: 1px 15px;
+		border: none;
+		border-radius: 4px;
+		width: 50%;
+	}
+
+	#input {
+		border: none;
+		opacity: 1;
+		border-radius: 4px;
+		gap: 8px;
+		/* padding: 8px; */
+		width: 60%;
+	}
+
+	#choice {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-left: -4vw;
+		width: 95%;
+		flex-wrap: nowrap;
+	}
+
+	.main2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-left: -6%;
+	}
+
+	.Search-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.param {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.inp {
+		width: 50%;
+	}
+
+	.inputs-fix {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.btn-fix {
+		margin-left: -9%;
+	}
+}
