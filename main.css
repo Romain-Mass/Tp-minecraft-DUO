@@ -135,7 +135,7 @@ main {
 	padding: 30px;
 	margin-top: -10vw;
 	margin-left: 15vw;
-	border-radius: 26px 30px 26px 30px;
+	border-radius: 4px;
 	width: 63%;
 }
 
@@ -162,6 +162,11 @@ h3,
 p,
 h1 {
 	font-family: "Rubik";
+	color: #3a3a3a;
+}
+
+h3 {
+	font-weight: 500;
 }
 
 .no-text-space {
@@ -232,7 +237,7 @@ a {
 		background-color: rgba(230, 239, 244, 1);
 		padding: 30px;
 		margin-top: 30px;
-		border-radius: 26px 30px 26px 30px;
+		border-radius: 4px;
 		width: 75%;
 	}
 
@@ -278,7 +283,7 @@ a {
 		padding: 30px;
 		margin-top: 20vw;
 		margin-left: 1.8vw;
-		border-radius: 26px 30px 26px 30px;
+		border-radius: 4px;
 		width: 75%;
 	}
 

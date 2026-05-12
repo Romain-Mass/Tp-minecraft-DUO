@@ -136,6 +136,10 @@ select {
 	width: 30%;
 }
 
+input {
+width: 90%;
+}
+
 .active-page {
 	text-decoration: underline;
 }
