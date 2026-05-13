@@ -211,18 +211,13 @@
 	margin-left: 10%;
 }
 
-.mob-found {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
 .notFound {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	margin-left: 19vw;
 }
 
 .slash {
@@ -270,6 +265,13 @@
 
 .menu-phone {
 	display: none;
+}
+
+.mob-found {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 10px;
+	gap: 15px;
 }
 
 @media screen and (max-width: 850px) {
@@ -452,6 +454,11 @@
 
 	.menu-phone {
 		display: none;
+	}
+
+	.mob-Found {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 

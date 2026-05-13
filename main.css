@@ -160,9 +160,17 @@ h1 {
 
 h3,
 p,
-h1 {
+h1,
+h2 {
 	font-family: "Rubik";
 	color: #3a3a3a;
+}
+
+h2 {
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 100%;
+	text-align: center;
 }
 
 h3 {
@@ -228,6 +236,163 @@ a {
 
 .menu-phone {
 	display: none;
+}
+
+.cardMobPassive {
+	border: 2px solid #4f8c69;
+	padding: 12px;
+}
+
+.cardMobNeutre {
+	border: 2px solid rgba(227, 181, 153, 1);
+	padding: 12px;
+}
+
+.cardMobHostile {
+	border: 2px solid #d24646;
+	padding: 12px;
+}
+
+.cardMobNamePassive {
+	background-color: #4f8c69;
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	color: white;
+	/* text-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5); */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.classifs {
+	color: #0246f1;
+	font-family: "Rubik";
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.cardMobNameNeutre {
+	background-color: rgba(227, 181, 153, 1);
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	color: white;
+	/* text-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5); */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardMobNameHostile {
+	background-color: #d24646;
+	box-shadow: -4px -4px 2px 0px rgba(0, 0, 0, 0.25) inset;
+	color: white;
+	/* text-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5); */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardMobImg {
+	width: 234px;
+	height: 151px;
+	object-fit: contain;
+}
+
+.cardMobClassification {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cardMobLinePassive {
+	border-bottom: solid #4f8c69 2px;
+	margin-bottom: 15px;
+	margin-top: -25px;
+}
+
+.cardMobLineNeutre {
+	border-bottom: solid rgba(227, 181, 153, 1) 2px;
+	margin-bottom: 15px;
+	margin-top: -25px;
+}
+
+.cardMobLineHostile {
+	border-bottom-color: #d24646;
+	border-bottom: solid #d24646 2px;
+	margin-bottom: 15px;
+	margin-top: -25px;
+}
+
+.buttonSeeMorePassive {
+	background-color: #4f8c69;
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	color: white;
+	text-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-family: "Rubik";
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 100%;
+	text-align: center;
+}
+
+.buttonSeeMoreNeutre {
+	background-color: rgba(227, 181, 153, 1);
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	color: white;
+	text-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-family: "Rubik";
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 100%;
+	text-align: center;
+}
+
+.buttonSeeMoreHostile {
+	background-color: #d24646;
+	box-shadow: -4px -4px 2px 0px rgba(0, 0, 0, 0.25) inset;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(0, 0, 0);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	font-family: "Rubik";
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 100%;
+	text-align: center;
 }
 
 @media screen and (max-width: 495px) {
