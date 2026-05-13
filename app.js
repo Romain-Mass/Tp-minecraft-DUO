@@ -1,6 +1,5 @@
 const $btnSearch = document.querySelector(".btn-search");
 const $AllMobs = document.querySelector(".mob-found");
-const $Not = document.querySelector(".notFound");
 const $menu = document.querySelector("#menu");
 const $exit = document.querySelector("#exit");
 const $dialog = document.querySelector("#dialog");
@@ -11,26 +10,54 @@ const $health = document.querySelector(".health");
 const $armor = document.querySelector(".armor");
 const $damage = document.querySelector(".damage");
 
-function filtrerÉléments(arr, requête) {
-	return arr.filter((el) => el.toLowerCase().includes(requête.toLowerCase()));
+let allMobs = [];
+
+$menu.addEventListener("click", () => $dialog.showModal());
+$exit.addEventListener("click", () => $dialog.close());
+
+async function loadAllMobs() {
+	try {
+		const response = await fetch("http://10.69.4.208:3000/v1/entities");
+		const data = await response.json();
+		return data;
+	} catch (err) {
+		console.error("Erreur lors du chargement des entités :", err);
+		return [];
+	}
 }
 
-$menu.addEventListener("click", () => {
-	$dialog.showModal();
-});
+function filterMobs(mobs) {
+	const query = $SearchBar.value.toLowerCase().trim();
+	const classification = $Class.value.toLowerCase();
+	const type = $Type.value.toLowerCase();
+	const minHealth = parseFloat($health.value);
+	const minArmor = parseFloat($armor.value);
+	const minDamage = parseFloat($damage.value);
 
-$exit.addEventListener("click", () => {
-	$dialog.close();
-});
+	return mobs.filter((mob) => {
+		const matchName = !query || mob.name.toLowerCase().includes(query);
+		const matchClass =
+			!classification || mob.classification?.toLowerCase() === classification;
+		const matchType = !type || mob.type?.toLowerCase() === type;
+		const matchHealth = isNaN(minHealth) || mob.health >= minHealth;
+		const matchArmor = isNaN(minArmor) || mob.armor >= minArmor;
+		const matchDamage = isNaN(minDamage) || mob.damage >= minDamage;
 
-$btnSearch.addEventListener("click", async (e) => {
-	e.preventDefault();
+		return (
+			matchName &&
+			matchClass &&
+			matchType &&
+			matchHealth &&
+			matchArmor &&
+			matchDamage
+		);
+	});
+}
 
+function displayMobs(mobs) {
 	$AllMobs.innerHTML = "";
 
-	const mobs = await loadAllMobs();
-
-	if (!mobs || mobs.length === 0) {
+	if (mobs.length === 0) {
 		$AllMobs.innerHTML = `
             <div class="notFound">
                 <h3>No entity found</h3>
@@ -39,38 +66,27 @@ $btnSearch.addEventListener("click", async (e) => {
 		return;
 	}
 
-	// for(let i = 0; i > mob.length; i++) {
-	// 	createCard();
-	// }
 	mobs.forEach((mob) => createCard(mob));
-
-	// filtrerÉléments();
-
-	console.log($SearchBar.value);
-	console.log($Class.value);
-	console.log($Type.value);
-	console.log($health.value);
-	console.log($armor.value);
-	console.log($damage.value);
-});
-
-async function loadAllMobs() {
-	try {
-		const response = await fetch("http://10.69.4.208:3000/v1/entities", {
-			method: "GET",
-		});
-
-		// if (!response.ok) throw new Error(Erreur HTTP : ${response.status});
-
-		const data = await response.json();
-		console.log(data);
-		return data;
-	} catch (err) {
-		console.error("Erreur lors du chargement des entités :", err);
-		return [];
-	}
 }
 
+// Bouton SEARCH
+$btnSearch.addEventListener("click", async (e) => {
+	e.preventDefault();
+
+	if (allMobs.length === 0) {
+		allMobs = await loadAllMobs();
+	}
+
+	const filtered = filterMobs(allMobs);
+	displayMobs(filtered);
+});
+
+// Filtre en temps réel via la barre de recherche
+$SearchBar.addEventListener("input", () => {
+	if (allMobs.length === 0) return;
+	const filtered = filterMobs(allMobs);
+	displayMobs(filtered);
+});
 
 function createCard(mob) {
 	const $div = document.createElement("div");
@@ -87,71 +103,26 @@ function createCard(mob) {
 	$img.alt = mob.name;
 	$img.classList.add("cardMobImg");
 	$class.textContent = mob.classification;
+	$class.classList.add("classifs");
 	$type.textContent = mob.type;
 	$SeeMore.textContent = "see more";
 
 	$div.classList.add("cardMob");
 	$div2.classList.add("card-mob-name");
-	$class.classList.add("classifs");
+	$div3.classList.add("cardMobClassification");
 
-	if (mob.type == "passive") {
-		$div.classList.add("cardMobPassive");
-		$div.classList.remove("cardMobNeutre");
-		$div.classList.remove("cardMobHostile");
-	} else if (mob.type == "neutral") {
-		$div.classList.add("cardMobNeutre");
-		$div.classList.remove("cardMobPassive");
-		$div.classList.remove("cardMobHostile");
-	} else {
-		$div.classList.add("cardMobHostile");
-		$div.classList.remove("cardMobNeutre");
-		$div.classList.remove("cardMobPassive");
-	}
+	const t = mob.type?.toLowerCase();
+	const typeMap = {
+		passive: "Passive",
+		neutral: "Neutre",
+		hostile: "Hostile",
+	};
+	const typeKey = typeMap[t] || "Hostile";
 
-	if (mob.type == "passive") {
-		$Name.classList.add("cardMobNamePassive");
-		$Name.classList.remove("cardMobNameNeutre");
-		$Name.classList.remove("cardMobNameHostile");
-	} else if (mob.type == "neutral") {
-		$Name.classList.add("cardMobNameNeutre");
-		$Name.classList.remove("cardMobNamePassive");
-		$Name.classList.remove("cardMobNameHostile");
-	} else {
-		$Name.classList.add("cardMobNameHostile");
-		$Name.classList.remove("cardMobNameNeutre");
-		$Name.classList.remove("cardMobNamePassive");
-	}
-
-	if (mob.type == "passive") {
-		$SeeMore.classList.add("buttonSeeMorePassive");
-		$SeeMore.classList.remove("buttonSeeMoreNeutre");
-		$SeeMore.classList.remove("buttonSeeMoreHostile");
-	} else if (mob.type == "neutral") {
-		$SeeMore.classList.add("buttonSeeMoreNeutre");
-		$SeeMore.classList.remove("buttonSeeMorePassive");
-		$SeeMore.classList.remove("buttonSeeMoreHostile");
-	} else {
-		$SeeMore.classList.add("buttonSeeMoreHostile");
-		$SeeMore.classList.remove("buttonSeeMoreNeutre");
-		$SeeMore.classList.remove("buttonSeeMorePassive");
-	}
-
-	if (mob.type == "passive") {
-		$div3.classList.add("cardMobClassification");
-		$div3.classList.add("cardMobLinePassive");
-		$div3.classList.remove("cardMobLineNeutre");
-		$div3.classList.remove("cardMobLineHostile");
-	} else if (mob.type == "neutral") {
-		$div3.classList.add("cardMobClassification");
-		$div3.classList.add("cardMobLineNeutre");
-		$div3.classList.remove("cardMobLinePassive");
-		$div3.classList.remove("cardMobLineHostile");
-	} else {
-		$div3.classList.add("cardMobClassification");
-		$div3.classList.add("cardMobLineHostile");
-		$div3.classList.remove("cardMobLineNeutre");
-		$div3.classList.remove("cardMobLinePassive");
-	}
+	$div.classList.add(`cardMob${typeKey}`);
+	$Name.classList.add(`cardMobName${typeKey}`);
+	$SeeMore.classList.add(`buttonSeeMore${typeKey}`);
+	$div3.classList.add(`cardMobLine${typeKey}`);
 
 	$div.appendChild($div2);
 	$div2.appendChild($Name);
@@ -163,14 +134,3 @@ function createCard(mob) {
 
 	$AllMobs.appendChild($div);
 }
-
-$SearchBar.addEventListener("input", () => {
-	const query = $SearchBar.value.toLowerCase().trim();
-
-	const filteredCards = loadAllMobs.filter((card) => {
-		return card.name.toLowerCase().includes(query);
-	});
-
-	resetcreateCard(mob);
-	displayAllCards(filteredCards);
-});
